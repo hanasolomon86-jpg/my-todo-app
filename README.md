@@ -1,28 +1,52 @@
 # She Dose; - Todo & Task Management App
 
-אפליקציית ניהול משימות מתקדמת ואינטואיטיבית שנבנתה ב-React, המשלבת ניהול סטטוסים, קטגוריות, שמירה בלוקל-סטורג' (LocalStorage) ותחזית מזג אוויר חיה.
+אפליקציית ניהול משימות שנבנתה ב-React, המאפשרת ליצור, לערוך ולמחוק משימות, לנהל קטגוריות וסטטוסים, לשמור נתונים ב-LocalStorage ולהציג נתוני מזג אוויר באמצעות API חיצוני.
 
-## 🚀 תכונות עיקריות (Features)
+## 🚀 Features
 
-- **ניהול משימות חכם:** הוספה, עריכה ומחיקה של משימות עם אישור מחיקה.
-- **קטגוריות וסינון:** מיון משימות לפי קטגוריות שונות וסינון לפי סטטוסים (פתוח/הושלם).
-- **שמירה מקומית (LocalStorage):** הנתונים נשמרים בדפדפן כך שהמשימות שלך נשמרות גם לאחר רענון.
-- **נתוני מזג אוויר:** אינטגרציה עם Open-Meteo API להצגת נתוני טמפרטורה ומזג אוויר ישירות באפליקציה (`WeatherWidget`).
-- **עיצוב רספונסיבי:** מותאם לעבודה נקייה ומסודרת במגוון מסכים.
+- **ניהול משימות:** הוספה, עריכה ומחיקה של משימות, כולל אישור לפני מחיקה.
+- **קטגוריות וסינון:** חלוקת משימות לקטגוריות וסינון לפי סטטוס (פתוח / הושלם).
+- **LocalStorage:** שמירת המשימות בדפדפן כך שהנתונים נשמרים גם לאחר רענון הדף.
+- **Weather Widget:** הצגת נתוני מזג אוויר באמצעות Open-Meteo API.
+- **Responsive Design:** התאמה למגוון גדלי מסכים.
 
-## 🛠 טכנולוגיות (Tech Stack)
+## 🛠 Tech Stack
 
-- **React** (Hooks, Component-based Architecture)
+- **React** – Hooks ו-Component-Based Architecture
 - **JavaScript (ES6+)**
 - **HTML5 & CSS3**
-- **External API** (Open-Meteo)
+- **Open-Meteo API**
+- **LocalStorage**
 
-## 💻 התקנה והרצה מקומית (Getting Started)
+## 💻 Getting Started
 
-כדי להריץ את הפרויקט מקומית במחשב שלך:
+כדי להריץ את הפרויקט מקומית:
 
-1. שכפל את הריפו למחשב שלך והיכנס לתיקיית הפרויקט:
-   ```bash
-   git clone <repository-url>
-   cd my-todo-app
-   ```
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/hanasolomon86-jpg/my-todo-app.git
+cd my-todo-app
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the development server
+
+```bash
+npm run dev
+```
+
+לאחר ההפעלה, פתח את הכתובת שתופיע בטרמינל, בדרך כלל:
+
+```text
+http://localhost:5173
+```
+
+## 📁 Project Structure
+
+הפרויקט מחולק לקומפוננטות React, כאשר כל קומפוננטה אחראית על חלק מסוים בממשק ובפונקציונליות של האפליקציה.
