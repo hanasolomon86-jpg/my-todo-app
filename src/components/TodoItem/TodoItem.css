@@ -1,0 +1,185 @@
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 14px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 6px;
+
+    /* גבול עדין וצללית יוקרתית */
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-right: 6px solid #cbd5e1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
+
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.todo-item:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+    border-color: rgba(203, 213, 225, 0.9);
+}
+
+/* --- עדיפויות --- */
+.todo-item.priority-high {
+    border-right-color: #dd5b5b;
+    background: linear-gradient(to left, hsla(0, 100%, 98%, 0.897), hsla(300, 57%, 93%, 0.568) 40%);
+}
+
+.todo-item.priority-medium {
+    border-right-color: #f1b958d0;
+    background: linear-gradient(to left, hsla(0, 100%, 98%, 0.897),  hsla(300, 57%, 93%, 0.568)40%);
+}
+
+.todo-item.priority-low {
+    border-right-color: #10b981;
+    background: linear-gradient(to left, hsla(0, 100%, 98%, 0.897),  hsla(300, 57%, 93%, 0.568) 40%);
+}
+
+/* --- צד ימין: Checkbox וטקסט --- */
+.todo-left-section {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.todo-checkbox {
+    width: 20px;
+    height: 20px;
+    accent-color: #4f46e5;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.todo-text {
+    font-size: 1.05rem;
+    color: #1e293b;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+}
+
+.completed-text {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+/* --- צד שמאל: פרטים, תאריך, סטטוס ומחיקה --- */
+.todo-right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+/* --- אזור הפרטים שנפתחים בלחיצה (מרווח מובטח ביניהם) --- */
+.todo-details {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+/* עיצוב בסיסי לכל התגיות ב-JSX שלך (.todo-tag) */
+.todo-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 9px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+/* עיצוב ייחודי לפי סוג התגית שמופיע ב-JSX */
+.category-tag {
+    background-color: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    font-weight: 600;
+}
+
+.priority-tag.High,
+.priority-tag.high {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.priority-tag.Medium,
+.priority-tag.medium {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.priority-tag.Low,
+.priority-tag.low {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+.date-tag {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+}
+
+.todo-date {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+/* --- תגיות סטטוס מודרניות --- */
+.status-tag {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: capitalize;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.status-tag:hover {
+    filter: brightness(0.95);
+}
+
+.status-tag.open {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.status-tag.in-progress {
+    background-color: #e0f2fe;
+    color: #0284c7;
+}
+
+.status-tag.completed {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+/* --- עיצוב תאריך יעד באיחור --- */
+.date-tag.overdue {
+    background-color: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fca5a5;
+    font-weight: 600;
+}
+
+/* --- עיצוב תאריך יעד להיום --- */
+.date-tag.due-today {
+    background-color: #fef3c7;
+    color: #d97706;
+    border: 1px solid #fcd34d;
+    font-weight: 600;
+}

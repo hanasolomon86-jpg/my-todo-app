@@ -1,0 +1,32 @@
+/* FilterToolBar.css */
+
+/* העטיפה של כפתורי הסינון */
+.filter-toolbar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+/* סגנון ברירת מחדל לכפתורי הסינון */
+.filter-toolbar button {
+    border: none;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #EAEAEA;
+    color: #4A4A4A;
+    transition: all 0.2s ease;
+}
+
+.filter-toolbar button:hover {
+    background-color: #E0E0E0;
+}
+
+/* כפתור פעיל/מסומן (אם מוסיפים ל-button את מחלקת active) */
+.filter-toolbar button.active {
+    background-color: #5A6578;
+    color: #FFFFFF;
+}

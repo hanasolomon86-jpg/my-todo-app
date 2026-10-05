@@ -1,0 +1,130 @@
+/* =========================================================
+   ADD TODO COMPONENT CSS
+========================================================= */
+
+.add-todo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 650px;
+    margin: 30px auto;
+    gap: 16px;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+/* שורת קלט הטקסט הראשית */
+.add-todo-input {
+    border: none;
+    border-bottom: 2px solid #d1d5db;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    color: #1e293b;
+    width: 100%;
+    padding: 8px 4px 10px;
+    text-align: center;
+    transition: border-color 0.2s ease;
+}
+
+.add-todo-input::placeholder {
+    color: #94a3b8;
+}
+
+/* פוקוס לשורת הקלט הראשית */
+.add-todo-input:focus,
+.add-todo-input:focus-visible {
+    border-bottom-color: var(--primary-color, #705d70);
+    outline: none !important;
+}
+
+/* שורת האפשרויות המורחבות שנפתחת למטה */
+.expanded-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    background: #ffffff;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color, #e2e8f0);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.expanded-options select,
+.expanded-options input[type="date"] {
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f8fafc;
+    font-size: 13px;
+    color: #334155;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* פוקוס ובחירה בשדות המורחבים - מוודא שהטקסט לעולם לא נעלם */
+.expanded-options select:focus,
+.expanded-options select:focus-visible,
+.expanded-options input[type="date"]:focus,
+.expanded-options input[type="date"]:focus-visible {
+    border-color: var(--primary-color, #705d70) !important;
+    background-color: #ffffff !important;
+    color: #334155 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(112, 93, 112, 0.12);
+}
+
+/* כפתור הוספה המעוגל הקטן */
+.add-todo-button {
+    background: var(--primary-color, #705d70);
+    color: #ffffff;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    line-height: 1;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 8px rgba(112, 93, 112, 0.2);
+}
+
+.add-todo-button:hover {
+    background: var(--primary-dark, #5a495a);
+    transform: translateY(-1px);
+}
+
+/* פוקוס לכפתור ה-Add */
+.add-todo-button:focus,
+.add-todo-button:focus-visible {
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(112, 93, 112, 0.3) !important;
+}
+
+/* רספונסיביות למסכים קטנים/מובייל */
+@media (max-width: 600px) {
+    .expanded-options {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .expanded-options select,
+    .expanded-options input[type="date"],
+    .add-todo-button {
+        width: 100%;
+    }
+
+    .add-todo-button {
+        border-radius: 8px;
+        height: 40px;
+    }
+}

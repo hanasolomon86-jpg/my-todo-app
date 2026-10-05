@@ -1,0 +1,66 @@
+/* =========================================================
+   DAILY PROGRESS COMPONENT CSS (עיצוב משודרג ומרשים)
+========================================================= */
+
+.daily-progress {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 30px;
+    padding: 24px;
+    width: 320px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.daily-progress:hover {
+    box-shadow: 0 14px 30px -5px rgba(79, 70, 229, 0.08);
+    transform: translateY(-2px);
+}
+
+.progress-title {
+    margin: 0 0 10px;
+    color: #0f172a;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.progress-count {
+    display: block;
+    font-size: 30px;
+    font-weight: 800;
+    color: #7c577ce0; /* גוון אינדיגו עמוק ומודרני */
+    margin-bottom: 14px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #f1f5f9;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #705D70 0%, #ad87ad 100%); /* מעבר צבעים חלק ומקצועי */
+    border-radius: 999px;
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-text {
+    margin: 0;
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 600;
+}

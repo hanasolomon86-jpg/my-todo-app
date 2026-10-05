@@ -1,0 +1,113 @@
+/* =========================================================
+   MAIN APP & LAYOUT STYLES (רקע חם, עיטורים ומיקומים מוקפדים)
+   ========================================================= */
+
+/* --- 1. רקע הדף הכללי עם טקסטורת פרחים עדינה --- */
+body {
+  background-color: #f5eefb;
+  background-image: 
+    radial-gradient(#e9d5ff 1.5px, transparent 1.5px), 
+    radial-gradient(#fbcfe8 1.5px, #f5eefb 1.5px);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #334155;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 20px;
+  box-sizing: border-box;
+}
+
+/* --- 2. הכרטיס הראשי - רקע חמים (לא לבן!) עם אפקט עומק --- */
+.todo-container {
+  width: 100%;
+  max-width: 1100px;
+  background: linear-gradient(180deg, #fbf7fe 0%, #f6effd 100%) !important;
+  border-radius: 24px;
+  box-shadow: 0 20px 45px rgba(124, 58, 237, 0.08);
+  padding: 24px 32px ;
+  border: 1.5px solid #ece0f8 !important;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* --- 3. סידור ה-Header והחלק העליון --- */
+.todo-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.header-top-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+/* כותרת גדולה ומרשימה */
+.todo-header h1, 
+.header-top-row h1 {
+  font-family: 'Georgia', serif;
+  font-size: 46px !important;
+  font-weight: 700;
+  margin: 0;
+  color: #705D70 !important;
+  letter-spacing: -0.5px;
+}
+
+/* --- 4. הצמדת מזג האוויר ימינה בלבד --- */
+.header-top-row .weather-container,
+.header-top-row .weather-widget,
+.weather-container {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+  background: #faf5ff !important;
+  border: 1px solid #e9d5ff !important;
+  border-radius: 10px !important;
+  padding: 6px 12px !important;
+  box-shadow: none !important;
+}
+
+/* --- 5. מירכוז ווידג'ט ההתקדמות (Progress) באמצע --- */
+.progress-section,
+.todo-header > div:has(.daily-progress) {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+.daily-progress {
+  margin: 0 auto !important; /* דריסה של כל Margin צדדי כדי שלא יימשך שמאלה */
+  background: hsla(269, 33%, 83%, 0.295) !important;
+  border: 1.5px solid #e9d5ff !important;
+  border-radius: 20px !important;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.05) !important;
+}
+
+
+/* --- 6. שדה הוספת משימה (Input) --- */
+.add-todo-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.add-todo-section input[type="text"] {
+  background-color: #ffffff !important;
+  border: 1.5px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  height: 48px !important;
+  font-size: 15px !important;
+}

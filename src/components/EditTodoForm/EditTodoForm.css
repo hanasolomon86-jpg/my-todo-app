@@ -1,0 +1,77 @@
+/* הקונטיינר הראשי של טופס העריכה */
+.edit-todo-form-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  background: #ffffff;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color, #e2e8f0);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+}
+
+/* התאמה אחידה לשדות הטקסט והבחירה בתוך טופס העריכה שיקבלו מראה נקי כמו למעלה */
+.edit-todo-form-container input[type="text"],
+.edit-todo-form-container input[type="date"],
+.edit-todo-form-container select {
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  font-size: 14px;
+  color: #334155;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.edit-todo-form-container input[type="text"]:focus,
+.edit-todo-form-container input[type="date"]:focus,
+.edit-todo-form-container select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  background-color: #ffffff;
+}
+
+/* עיצוב כפתורי שמירה וביטול בתוך טופס העריכה אם צריך */
+.edit-todo-form-container button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+/* כפתור העיגול של אייקון העריכה בטבלה עצמה */
+.edit-icon-btn {
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  min-height: 28px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 50% !important;
+  background: #eef4ff !important;
+  color: #536b9d !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease !important;
+}
+
+.edit-icon-btn:hover {
+  background: #536b9d !important;
+  color: #ffffff !important;
+  transform: scale(1.05);
+}

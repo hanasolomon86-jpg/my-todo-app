@@ -1,0 +1,29 @@
+.weather-container {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    padding: 0px 16px;
+    max-width: 250px;
+    margin: 10px auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #e0e0e0;
+}
+
+.weather-container h3 {
+    margin: 0;
+    font-size: 13px;
+    color: #495057;
+    font-weight: 500;
+}
+
+.weather-container p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: #212529;
+    background: #ffffff;
+    padding: 4px 15px;
+    border-radius: 12px;
+}
